@@ -1,0 +1,47 @@
+div.menu{
+	/* width:250px; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+div.menu a{
+	color: black;
+	display:block;
+	border: 3px solid aqua;
+	padding: 8px;
+	text-decoration: none;
+	margin: 5px;
+    text-align: center;
+}
+div.menu a:hover{
+	background-color: aqua;
+}
+div.text{
+	text-align: center;
+}
+body{
+	background-color: rgb(255, 255, 255);
+	/* background-image: url('assets/image/ダウンロード.jpg'); */
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	/* Font */
+	font-family: "Noto Sans", sans-serif;
+  	/* font-optical-sizing: auto;
+	font-weight: 100;
+	font-style: normal;
+	color: black; */
+}
+
+/* Pseudo-class selectors */
+    button:focus{
+	background-color: yellow;
+}
+
+div.time{
+	text-align: center;
+}
+body h3 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

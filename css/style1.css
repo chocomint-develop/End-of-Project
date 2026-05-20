@@ -1,0 +1,21 @@
+/*Định dạng bảng*/
+table, td, th{
+    border: 3px solid black;
+    border-collapse: collapse;
+}
+table{
+    width: 50%;
+}
+td, th{
+    padding: 8px;
+}
+caption{
+    font-weight: bolder;
+    font-size:28pt;
+    text-transform: uppercase;
+    color:rgb(0, 0, 0);
+    background-color: aqua;
+}
+tr.header{
+    background-color: rgb(164, 237, 218);
+}

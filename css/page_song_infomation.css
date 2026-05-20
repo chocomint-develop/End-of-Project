@@ -1,0 +1,27 @@
+div.title{
+	text-align: center;
+}
+div.image{
+	text-align: center;
+}
+
+div.container-fluid{
+	background-color: lightcyan;
+}
+
+div.container-fluid.mt-3{
+	background-color: white;
+}
+
+body{
+	font-family: "Open Sans", sans-serif !important;
+}
+div.Credit{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+div.Credit img {
+	margin: 5px;
+}
