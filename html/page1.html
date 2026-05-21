@@ -4,46 +4,23 @@
 		<title>HTML</title>
 		<meta charset = "utf-8">
         <!-- external css -->
-		<link rel="stylesheet" href="../css/style1.css">
+		<link rel="stylesheet" href="../css/sidebar-content.css">
 		
     </style>
 	</head>
 	<body>
-		<h1>Trang 1 đẹp trai</h1>
-		<button onclick="document.location = '../index.html'">Trang Chủ</button>
-		<button onclick="document.location = 'page2.html'"> Trang 2</button>
-		<button onclick="document.location = 'page3.html'">Trang 3</button> <br>
-        
-		<!-- <a href ="page2.html" target = "_blank"> Trang 2
-		<a href ="page3.html" target = "_blank"> Trang 3 <br> -->
-		<!-- Table (bài trong lớp) -->
-		<table>
-        <caption> Weekends Plan</caption>
-        <tr class = "header">
-            <th rowspan="2">Time</th>
-            <th colspan="2">Weekends</th>
-        </tr>
-        <tr class = "header">
-            <th>1</th>
-            <th>2</th>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-        </tr>
-    </table>
-    <img src ="../assets/image/image.jpg" alt="Hình đẹp trai">
-	<br>
-    <label>Jack Giới tính Gì?</label> <br>
-    <input type ="radio" id ="rdNam" name ="rdGioitinh" value="1" checked> 
-    <label for ="rdNam">Nam</label> 
-    <input type ="radio" id ="rdNu" name ="rdGioitinh" value="2" checked>
-    <label for ="rdNu">Nữ</label>   
+		<!-- Thanh bên -->
+        <div id="sidebar">
+            <div class = "title">Tìm hiểu HTML</div>
+
+            <ul class = "nav-list">
+                <li><a href="#" class ="active">Giới thiệu HTML</a></li>
+            </ul>
+
+            <ul class = "nav-list">
+                <li><a href="#">???</a></li>
+            </ul>
+        </div>
+
 	</body>
 </html>
