@@ -239,3 +239,32 @@
   .vd-tag {
     color: mediumblue;
   }
+
+  /* vd bảng  */
+  .bang {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+    border: 1px solid #ccc;
+    margin: 20px;
+  }
+
+  .bang tr:nth-child(even) {
+    background-color: #E7E9EB;
+  }
+
+  tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    unicode-bidi: isolate;
+    border-color: inherit;
+  }
+
+  .bang td, .bang th {
+    padding: 8px 8px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: top;
+}
+
