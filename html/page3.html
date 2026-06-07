@@ -1,0 +1,159 @@
+<!DOCTYPE html>		
+<html lang = "vi">
+	<head>
+		<title>HTML</title>
+		<meta charset = "utf-8">
+        <!-- external css -->
+		<link rel="stylesheet" href="../css/sidebar-content.css">
+		
+    </style>
+	</head>
+	<body>
+		<!-- Thanh bên -->
+        <div id="sidebar">
+            <div class = "title">Tìm hiểu HTML</div>
+
+            <!-- Nội dung đg ở  -->
+            <ul class = "nav-list">
+                <li><a href="page1.html">Giới thiệu HTML</a></li>
+            </ul>
+            <!-- list nội dung -->
+            <ul class = "nav-list"> 
+                <li><a href="page2.html">Trình soạn thảo HTML</a></li>
+                <li><a href="#" class="active">Ví dụ cơ bản về HTML</a></li>
+                <li><a href="#">???</a></li>
+            </ul>
+        </div>
+
+        <!-- Nội dung chính -->
+        <div id="main-conttent">
+            <!-- Tiêu đề trang -->
+            <div class="page-header">
+                <h1 class="page-title">Ví dụ cơ bản về HTML</h1>
+            </div>
+
+            <!-- nút chuyển nội dung -->
+            <div class="nav-button">
+                <button class="button-nav" onclick="document.location = 'page2.html'">❮ Lùi</button>
+                <button class="button-nav" onclick="document.location = '#'">Tiếp ❯</button>
+            </div>
+
+            <!-- intro -->
+            <p class="intro-text">Trong chương này, chúng ta sẽ xem xét một số ví dụ cơ bản về HTML.</p>
+            <p>Đừng lo lắng nếu chúng ta sử dụng các thẻ mà bạn chưa học.</p>
+
+            <hr class="divider">
+
+            <!-- Tài liệu HTML -->
+            <h2 class="section-title">Tài liệu HTML</h2>
+            <p>Tất cả các tài liệu HTML phải bắt đầu bằng một khai báo kiểu tài liệu: <code>&lt;!DOCTYPE html&gt;</code>.</p><br>
+            <p>Bản thân tài liệu HTML bắt đầu bằng <code>&lt;html&gt;</code> và kết thúc bằng <code>&lt;/html&gt;</code>.</p><br>
+            <p>Phần hiển thị của tài liệu HTML nằm giữa <code>&lt;body&gt;</code> và <code>&lt;/body&gt;</code>.</p><br>
+
+            <div class="example-box">
+                <div class="example-label">Ví dụ</div>
+                <div class="code-box">
+                    <span class="comment">&lt;!DOCTYPE html&gt;</span><br>
+                    <span class="tag">&lt;</span><span class="tagname">html</span><span class="tag">&gt;</span><br>
+                    <span class="tag">&lt;</span><span class="tagname">body</span><span class="tag">&gt;</span><br>
+                    &nbsp;&nbsp;<span class="tag">&lt;</span><span class="tagname">h1</span><span class="tag">&gt;</span>Tiêu đề đầu tiên của tôi<span class="tag">&lt;/</span><span class="tagname">h1</span><span class="tag">&gt;</span><br>
+                    &nbsp;&nbsp;<span class="tag">&lt;</span><span class="tagname">p</span><span class="tag">&gt;</span>Đoạn văn đầu tiên của tôi.<span class="tag">&lt;/</span><span class="tagname">p</span><span class="tag">&gt;</span><br>
+                    <span class="tag">&lt;/</span><span class="tagname">body</span><span class="tag">&gt;</span><br>
+                    <span class="tag">&lt;/</span><span class="tagname">html</span><span class="tag">&gt;</span><br>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Khai báo DOCTYPE -->
+            <h2 class="section-title">Khai báo &lt;!DOCTYPE&gt;</h2>
+            <p>Khai báo <code>&lt;!DOCTYPE&gt;</code> đại diện cho kiểu tài liệu và giúp trình duyệt hiển thị các trang web một cách chính xác.</p><br>
+            <p>Nó chỉ được xuất hiện một lần, ở đầu trang (trước bất kỳ thẻ HTML nào).</p><br>
+            <p>Khai báo <code>&lt;!DOCTYPE&gt;</code> không phân biệt chữ hoa chữ thường.</p><br>
+            <p>Khai báo <code>&lt;!DOCTYPE&gt;</code> cho HTML5 như sau:</p><br>
+
+            <div class="example-box">
+                <div class="example-label">Ví dụ</div>
+                <div class="code-box">
+                    <span class="comment">&lt;!DOCTYPE html&gt;</span><br>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Tiêu đề HTML -->
+            <h2 class="section-title">Tiêu đề HTML</h2>
+            <p>Tiêu đề HTML được định nghĩa bằng các thẻ <code>&lt;h1&gt;</code> đến <code>&lt;h6&gt;</code>.</p><br>
+            <p><code>&lt;h1&gt;</code> định nghĩa tiêu đề quan trọng nhất. <code>&lt;h6&gt;</code> định nghĩa tiêu đề ít quan trọng nhất:</p><br>
+
+            <div class="example-box">
+                <div class="example-label">Ví dụ</div>
+                <div class="code-box">
+                    <span class="tag">&lt;</span><span class="tagname">h1</span><span class="tag">&gt;</span>Đây là tiêu đề 1<span class="tag">&lt;/</span><span class="tagname">h1</span><span class="tag">&gt;</span><br>
+                    <span class="tag">&lt;</span><span class="tagname">h2</span><span class="tag">&gt;</span>Đây là tiêu đề 2<span class="tag">&lt;/</span><span class="tagname">h2</span><span class="tag">&gt;</span><br>
+                    <span class="tag">&lt;</span><span class="tagname">h3</span><span class="tag">&gt;</span>Đây là tiêu đề 3<span class="tag">&lt;/</span><span class="tagname">h3</span><span class="tag">&gt;</span><br>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Đoạn văn HTML -->
+            <h2 class="section-title">Đoạn văn HTML</h2>
+            <p>Đoạn văn HTML được định nghĩa bằng thẻ <code>&lt;p&gt;</code>:</p><br>
+
+            <div class="example-box">
+                <div class="example-label">Ví dụ</div>
+                <div class="code-box">
+                    <span class="tag">&lt;</span><span class="tagname">p</span><span class="tag">&gt;</span>Đây là một đoạn văn.<span class="tag">&lt;/</span><span class="tagname">p</span><span class="tag">&gt;</span><br>
+                    <span class="tag">&lt;</span><span class="tagname">p</span><span class="tag">&gt;</span>Đây là một đoạn văn khác.<span class="tag">&lt;/</span><span class="tagname">p</span><span class="tag">&gt;</span><br>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Liên kết HTML -->
+            <h2 class="section-title">Liên kết HTML</h2>
+            <p>Liên kết HTML được định nghĩa bằng thẻ <code>&lt;a&gt;</code>:</p><br>
+
+            <div class="example-box">
+                <div class="example-label">Ví dụ</div>
+                <div class="code-box">
+                    <span class="tag">&lt;</span><span class="tagname">a</span> <span class="attr">href</span>=<span class="value">"https://www.w3schools.com"</span><span class="tag">&gt;</span>Đây là một liên kết<span class="tag">&lt;/</span><span class="tagname">a</span><span class="tag">&gt;</span><br>
+                </div>
+            </div>
+
+            <p><br>Đích đến của liên kết được chỉ định trong thuộc tính <code>href</code>.</p><br>
+            <p>Các thuộc tính được sử dụng để cung cấp thông tin bổ sung về các phần tử HTML.</p><br>
+            <p>Bạn sẽ tìm hiểu thêm về các thuộc tính trong chương sau.</p>
+
+            <hr class="divider">
+
+            <!-- Hình ảnh HTML -->
+            <h2 class="section-title">Hình ảnh HTML</h2>
+            <p>Hình ảnh HTML được định nghĩa bằng thẻ <code>&lt;img&gt;</code>.</p><br>
+            <p>Tệp nguồn (<code>src</code>), văn bản thay thế (<code>alt</code>), chiều rộng và chiều cao được cung cấp dưới dạng thuộc tính:</p><br>
+
+            <div class="example-box">
+                <div class="example-label">Ví dụ</div>
+                <div class="code-box">
+                    <span class="tag">&lt;</span><span class="tagname">img</span> <span class="attr">src</span>=<span class="value">"w3schools.jpg"</span> <span class="attr">alt</span>=<span class="value">"W3Schools.com"</span> <span class="attr">width</span>=<span class="value">"104"</span> <span class="attr">height</span>=<span class="value">"142"</span><span class="tag">&gt;</span><br>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Cách xem mã nguồn HTML -->
+            <h2 class="section-title">Cách xem mã nguồn HTML</h2>
+            <p>Bạn đã bao giờ nhìn thấy một trang web và tự hỏi "Này! Họ đã làm điều đó như thế nào?"</p><br>
+
+            <h3 class="section-title">Xem mã nguồn HTML:</h3>
+            <p>Nhấn <strong>CTRL + U</strong> trong một trang HTML, hoặc nhấp chuột phải vào trang và chọn <strong>"Xem mã nguồn trang"</strong>. Thao tác này sẽ mở một tab mới chứa mã nguồn HTML của trang.</p><br>
+
+            <h3 class="section-title">Kiểm tra một phần tử HTML:</h3>
+            <p>Nhấp chuột phải vào một phần tử (hoặc một vùng trống), và chọn <strong>"Kiểm tra"</strong> để xem các phần tử được tạo thành từ những gì (bạn sẽ thấy cả HTML và CSS). Bạn cũng có thể chỉnh sửa HTML hoặc CSS ngay lập tức trong bảng Phần tử hoặc Kiểu mở ra.</p>
+
+            <hr class="divider">
+        </div>
+    </body>
+</html>
+            
