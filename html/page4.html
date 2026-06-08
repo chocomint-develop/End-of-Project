@@ -1,0 +1,163 @@
+<!DOCTYPE html>		
+<html lang = "vi">
+	<head>
+		<title>HTML</title>
+		<meta charset = "utf-8">
+        <!-- external css -->
+		<link rel="stylesheet" href="../css/sidebar-content.css">
+		
+    </style>
+	</head>
+	<body>
+		<!-- Thanh bên -->
+        <div id="sidebar">
+            <div class = "title">Tìm hiểu HTML</div>
+
+            <!-- Nội dung đg ở  -->
+            <ul class = "nav-list">
+                <li><a href="page1.html">Giới thiệu HTML</a></li>
+            </ul>
+            <!-- list nội dung -->
+            <ul class = "nav-list"> 
+                <li><a href="page2.html">Trình soạn thảo HTML</a></li>
+                <li><a href="page3.html">Ví dụ cơ bản về HTML</a></li>
+                <li><a href="#" class="active">Thuộc tính HTML</a></li>
+            </ul>
+        </div>
+
+        <!-- Nội dung chính -->
+        <div id="main-conttent">
+            <!-- Tiêu đề trang -->
+            <div class="page-header">
+                <h1 class="page-title">Thuộc tính HTML</h1>
+            </div>
+
+            <!-- nút chuyển nội dung -->
+            <div class="nav-button">
+                <button class="button-nav" onclick="document.location = 'page3.html'">❮ Lùi</button>
+                <button class="button-nav" onclick="document.location = '#'">Tiếp ❯</button>
+            </div>
+
+            <!-- intro -->
+            <p class="intro-text">Các thuộc tính HTML cung cấp thông tin bổ sung về các phần tử HTML.</p>
+
+            <hr class="divider">
+
+            <!-- Thuộc tính HTML -->
+            <h2 class="section-title">Thuộc tính HTML</h2>
+            <ul>
+                <li>Tất cả các phần tử HTML đều có thể có thuộc tính.</li>
+                <li>Thuộc tính cung cấp thông tin bổ sung về các phần tử.</li>
+                <li>Các thuộc tính luôn được chỉ định trong thẻ mở.</li>
+                <li>Các thuộc tính thường được biểu diễn dưới dạng cặp tên/giá trị, ví dụ: <code>name="value"</code></li>
+            </ul>
+
+            <hr class="divider">
+
+            <!-- Tóm tắt thuộc tính -->
+            <h2 class="section-title">Tóm tắt các thuộc tính</h2>
+            <ul>
+                <li>Tất cả các phần tử HTML đều có thể có thuộc tính.</li>
+            </ul>
+
+            <!-- href -->
+            <p><br>Thuộc tính <code>href</code> của thẻ <code>&lt;a&gt;</code> chỉ định URL của trang mà liên kết dẫn đến hoặc là đến một file HTML nào đó muốn đến.</p><br>
+
+            <p><strong>1. Link đến 1 trang web khác.</strong></p>
+            <div class="example-box">
+                <div class="example-label">Ví dụ</div>
+                <div class="code-box">
+                    <span class="tag">&lt;</span><span class="tagname">a</span> <span class="attr">href</span>=<span class="value">"https://www.youtube.com"</span><span class="tag">&gt;</span>Visit Youtube watching video<span class="tag">&lt;/</span><span class="tagname">a</span><span class="tag">&gt;</span><br>
+                </div>
+            </div>
+
+            <p><strong>2. Link đến 1 file HTML.</strong></p>
+            <div class="example-box">
+                <div class="example-label">Ví dụ</div>
+                <div class="code-box">
+                    <span class="tag">&lt;</span><span class="tagname">a</span> <span class="attr">href</span>=<span class="value">"page1.html"</span><span class="tag">&gt;</span>Visit Youtube watching video<span class="tag">&lt;/</span><span class="tagname">a</span><span class="tag">&gt;</span><br>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- src -->
+            <p>Thuộc tính <code>src</code> của thẻ <code>&lt;img&gt;</code> chỉ định đường dẫn đến hình ảnh cần hiển thị.</p><br>
+
+            <p><strong>1. Link đến 1 trang web khác.</strong></p>
+            <div class="example-box">
+                <div class="example-label">Ví dụ</div>
+                <div class="code-box">
+                    <span class="tag">&lt;</span><span class="tagname">img</span> <span class="attr">src</span>=<span class="value">"URL của bức ảnh"</span><span class="tag">&gt;</span><br>
+                </div>
+            </div>
+
+            <p><strong>2. Link đến 1 file ảnh.</strong></p>
+            <div class="example-box">
+                <div class="example-label">Ví dụ</div>
+                <div class="code-box">
+                    <span class="tag">&lt;</span><span class="tagname">img</span> <span class="attr">src</span>=<span class="value">"picture.jpg"</span><span class="tag">&gt;</span><br>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- width & height -->
+            <p>Các thuộc tính <code>width</code> và <code>height</code> cung cấp thông tin cho thẻ <code>&lt;img&gt;</code> về kích thước của hình ảnh.</p><br>
+            <div class="example-box">
+                <div class="example-label">Ví dụ</div>
+                <div class="code-box">
+                    <span class="tag">&lt;</span><span class="tagname">img</span> <span class="attr">src</span>=<span class="value">"picture.jpg"</span> <span class="attr">width</span>=<span class="value">"1366px"</span> <span class="attr">height</span>=<span class="value">"768px"</span><span class="tag">&gt;</span><br>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- alt -->
+            <p>Thuộc tính <code>alt</code> của thẻ <code>&lt;img&gt;</code> cung cấp văn bản thay thế cho hình ảnh.</p><br>
+            <div class="example-box">
+                <div class="example-label">Ví dụ</div>
+                <div class="code-box">
+                    <span class="tag">&lt;</span><span class="tagname">img</span> <span class="attr">src</span>=<span class="value">"picture.jpg"</span> <span class="attr">alt</span>=<span class="value">"mô tả bức ảnh"</span><span class="tag">&gt;</span><br>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- style -->
+            <p>Thuộc tính <code>style</code> được sử dụng để thêm kiểu dáng cho một phần tử, chẳng hạn như màu sắc, phông chữ, kích thước, v.v.</p><br>
+            <div class="example-box">
+                <div class="example-label">Ví dụ</div>
+                <div class="code-box">
+                    <span class="tag">&lt;</span><span class="tagname">p</span> <span class="attr">style</span>=<span class="value">"color: darkblue;"</span><span class="tag">&gt;</span>Đây là một đoạn văn có màu chữ xanh đậm.<span class="tag">&lt;/</span><span class="tagname">p</span><span class="tag">&gt;</span><br>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- lang -->
+            <p>Thuộc tính <code>lang</code> của thẻ <code>&lt;html&gt;</code> khai báo ngôn ngữ của trang web.</p><br>
+            <div class="example-box">
+                <div class="example-label">Ví dụ</div>
+                <div class="code-box">
+                    <span class="tag">&lt;</span><span class="tagname">html</span> <span class="attr">lang</span>=<span class="value">"vi"</span><span class="tag">&gt;</span> <span class="comment">// ngôn ngữ Tiếng Việt</span><br>
+                    <span class="tag">&lt;</span><span class="tagname">html</span> <span class="attr">lang</span>=<span class="value">"en"</span><span class="tag">&gt;</span> <span class="comment">// ngôn ngữ Tiếng Anh</span><br>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- title -->
+            <p>Thuộc tính <code>title</code> xác định một số thông tin bổ sung về một phần tử.</p><br>
+            <div class="example-box">
+                <div class="example-label">Ví dụ</div>
+                <div class="code-box">
+                    <span class="tag">&lt;</span><span class="tagname">h1</span> <span class="attr">title</span>=<span class="value">"Tiêu đề chính của trang"</span><span class="tag">&gt;</span>Xin chào, đây là ví dụ HTML!<span class="tag">&lt;/</span><span class="tagname">h1</span><span class="tag">&gt;</span><br>
+                </div>
+            </div>
+
+            <hr class="divider">
+        </div>
+    </body>
+</html>
+            

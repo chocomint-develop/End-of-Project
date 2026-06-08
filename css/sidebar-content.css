@@ -37,11 +37,11 @@
     cursor: pointer;
     text-decoration: none;
   }
-  .nav-item:hover { background: #f0f0f0; }
+  /* .nav-item:hover { background: #1a1a1a; }
   .nav-item.active {
     background: #04AA6D;
     color: #fff;
-  }
+  } */
   .nav-item .chevron { font-size: 10px; color: #aaa; }
   .nav-item.active .chevron { color: rgba(255,255,255,0.7); }
 
