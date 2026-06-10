@@ -10,8 +10,8 @@
 
   /* ── thanh bên ── */
   #sidebar {
-    width: 220px;
-    min-width: 220px;
+    width: 280px;
+    /* min-width: 220px; */
     background: #272727;
     border-right: 1px solid #ddd;
     overflow-y: auto;
@@ -96,7 +96,7 @@
 
   /* ── main ── */
   #main-conttent {
-    margin-left: 220px;
+    margin-left: 280px;
     flex: 1;
     background: #fff;
     padding: 30px 44px 60px;
