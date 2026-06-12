@@ -1,0 +1,189 @@
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+    --gap:5px;
+    --bg:#f3f0f8; /* Nền sáng tím nhạt */
+    --topbar:#ffffff; /* Thanh topbar màu trắng sạch sẽ */
+}
+html,body{
+    height:100%;
+    background:var(--bg);
+    font-family:'Source Sans 3','Segoe UI',sans-serif;
+    overflow-x:hidden;
+}
+body{
+    /* Dải màu chuyển mượt mà từ tím sáng sang trắng hồng nhẹ */
+    background: linear-gradient(160deg, #e8e2f7 0%, #ece3fc 50%, #d8c7f9 100%);
+    /* background: white; */
+    min-height: 100vh;
+}
+
+/* ── Topbar ── */
+.topbar{
+    position:fixed;top:0;left:0;right:0;height:38px;
+    background:rgba(10,14,20,0.85);
+    backdrop-filter:blur(8px);
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 18px;z-index:200;
+    border-bottom:1px solid rgba(255,255,255,0.06);
+}
+.topbar-l{display:flex;align-items:center;gap:12px}
+.win-flag{
+    display:grid;grid-template-columns:1fr 1fr;gap:2px;
+    width:18px;height:18px;cursor:pointer
+}
+.win-flag span{display:block}
+.f1{background:#f25022}.f2{background:#7fba00}
+.f3{background:#00a4ef}.f4{background:#ffb900}
+.topbar-title{color:rgba(255,255,255,0.85);font-size:13px;font-weight:300;letter-spacing:.4px}
+.topbar-r{display:flex;align-items:center;gap:16px}
+#tb-date{color:rgba(255,255,255,0.4);font-size:12px;font-weight:300}
+#tb-clock{color:rgba(255,255,255,0.85);font-size:13px;font-weight:300;min-width:56px;text-align:right}
+
+/* ── Screen ── */
+.screen{
+    padding:58px 36px 36px;
+    min-height:100vh;
+    position:relative;
+}
+
+/* ── Greeting ── */
+.greeting{margin-bottom:22px;animation:fadeUp .5s ease both}
+.greeting h1{font-size:26px;font-weight:200;color:#000000;letter-spacing:.5px}
+.greeting p{font-size:13px;color:rgba(0, 0, 0, 0.797);margin-top:3px;font-weight:300}
+
+/* ── Section label ── */
+.sec-label{
+    font-size:11px;font-weight:600;
+    color:rgba(0, 0, 0, 0.787);
+    text-transform:uppercase;letter-spacing:2px;
+    margin:0 0 8px;
+    animation:fadeUp .5s .08s ease both;
+}
+
+/* ── Tile grid ── */
+.tile-grid{
+    display:flex;flex-wrap:wrap;
+    gap:var(--gap);
+    max-width:900px;
+    margin-bottom:22px;
+}
+
+/* ── Base tile ── */
+.tile{
+    position:relative;overflow:hidden;
+    display:flex;flex-direction:column;justify-content:flex-end;
+    padding:9px 11px;cursor:pointer;
+    text-decoration:none;color:#fff;
+    flex-shrink:0;
+    opacity:0;
+    animation:tileIn .3s ease forwards;
+    transition:filter .12s,transform .1s;
+}
+.tile:hover{filter:brightness(1.18);transform:scale(0.975)}
+.tile:active{filter:brightness(.8);transform:scale(0.95)}
+
+/* shine */
+.tile::before{
+    content:'';position:absolute;inset:0 0 60% 0;
+    background:rgba(255,255,255,0.06);
+    pointer-events:none;
+}
+
+/* sizes */
+.sm  {width:70px;height:70px}
+.md  {width:146px;height:146px}
+.wide{width:298px;height:146px}
+.tall{width:146px;height:298px}
+.lg  {width:298px;height:298px}
+
+/* colors — Windows 8 palette */
+.blue  {background:#0078d7}.dkblue {background:#004B87}
+.green {background:#107c10}.lime   {background:#7dbb00}
+.orange{background:#d83b01}.red    {background:#e81123}
+.purple{background:#5c2d91}.pink   {background:#c239b3}
+.teal  {background:#008272}.cyan   {background:#00b4d5}
+.brown {background:#7e3b00}.slate  {background:#37474f}
+.indigo{background:#3b3a99}
+
+/* tile icon */
+.t-ico{
+    position:absolute;
+    font-size:38px;line-height:1;
+    top:50%;left:50%;transform:translate(-50%,-58%);
+    opacity:.92;
+}
+.sm .t-ico{font-size:24px;transform:translate(-50%,-52%)}
+.lg .t-ico{font-size:58px}
+.wide .t-ico{left:28%;font-size:44px}
+
+/* tile label */
+.t-lbl{
+    font-size:11px;color:rgba(255,255,255,0.9);
+    letter-spacing:.2px;line-height:1.3;
+    position:relative;z-index:2;
+}
+.sm .t-lbl{font-size:9px}
+.wide .t-lbl{font-size:12px}
+
+/* right side of wide tiles */
+.t-right{
+    position:absolute;right:14px;top:50%;transform:translateY(-50%);
+    text-align:right;
+}
+.t-big{font-size:36px;font-weight:100;color:#fff;line-height:1}
+.t-sub{font-size:11px;color:rgba(255,255,255,.65);font-weight:300;margin-top:4px}
+
+/* badge */
+.soon{
+    position:absolute;top:7px;right:7px;
+    background:rgba(0,0,0,.3);
+    color:rgba(255,255,255,.5);
+    font-size:8px;font-weight:600;
+    text-transform:uppercase;letter-spacing:1px;
+    padding:2px 5px;
+}
+
+/* live clock tile */
+.clk-wrap{
+    position:absolute;top:50%;left:50%;
+    transform:translate(-50%,-58%);text-align:center;
+}
+.clk-time{font-size:44px;font-weight:100;color:#fff;letter-spacing:-1px;line-height:1}
+.clk-date{font-size:11px;color:rgba(255,255,255,.6);font-weight:300;margin-top:5px}
+#clock-tile .t-ico{display:none}
+
+/* animations */
+@keyframes tileIn{from{opacity:0;transform:scale(.82)}to{opacity:1;transform:scale(1)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+.tile:nth-child(1){animation-delay:.04s}
+.tile:nth-child(2){animation-delay:.09s}
+.tile:nth-child(3){animation-delay:.14s}
+.tile:nth-child(4){animation-delay:.19s}
+.tile:nth-child(5){animation-delay:.24s}
+.tile:nth-child(6){animation-delay:.29s}
+.tile:nth-child(7){animation-delay:.34s}
+.tile:nth-child(8){animation-delay:.39s}
+.tile:nth-child(9){animation-delay:.44s}
+.tile:nth-child(10){animation-delay:.49s}
+.tile:nth-child(11){animation-delay:.54s}
+.tile:nth-child(12){animation-delay:.59s}
+
+/* ripple */
+.ripple{
+    position:absolute;border-radius:0;
+    background:rgba(255,255,255,.22);
+    transform:scale(0);
+    animation:ripp .35s linear;pointer-events:none;
+}
+@keyframes ripp{to{transform:scale(5);opacity:0}}
+
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-thumb{background:rgba(255,255,255,.12)}
+::-webkit-scrollbar-track{background:transparent}
+
+@media(max-width:560px){
+    .screen{padding:52px 14px 20px}
+    .wide{width:220px}
+    .lg{width:220px;height:220px}
+}

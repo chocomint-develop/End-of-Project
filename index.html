@@ -1,33 +1,115 @@
-<!DOCTYPE html>		
-<html lang = "vi">
-	<head>
-		<title>Trang chủ</title>
-		<meta charset = "utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="css/homepagestyle.css">
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Trang chủ</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;700&family=Source+Sans+3:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/home-metro-ui.css">
+</head>
+<body>
 
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-	</head>
-	<body>
-		<div class="text" >
-			<h1>Trang chủ</h1>
-			<div class ="time">
-				<p id = "time"></p>
-				<script>
-					document.getElementById('time').innerHTML = Date();
-				</script> 
-			</div>
-			<p>Chào mừng các bạn đến với website hỗ trợ học lập trình</p>
-		</div>	
-		<hr width="100%" size="3px" color="black"> 
-		
-		<h3>Các danh sách ngôn ngữ lập trình</h3>
-		<div class="menu" >
-			<a href ="html/page1.html" title="Tìm hiểu HTML">HTML</a>
-			<a href ="#" title="Tìm hiểu HTML">Kotlin (comming soon...)</a>
-		</div>
-			
-	</body>
+<!-- Topbar -->
+<div class="topbar">
+    <div class="topbar-l">
+        <!-- <div class="win-flag" title="Start">
+            <span class="f1"></span><span class="f2"></span>
+            <span class="f3"></span><span class="f4"></span>
+        </div> -->
+        <span class="topbar-title">Học Lập Trình</span>
+    </div>
+    <div class="topbar-r">
+        <span id="tb-date"></span>
+        <span id="tb-clock"></span>
+    </div>
+</div>
+
+<!-- Start screen -->
+<div class="screen">
+
+    <div class="greeting">
+        <h1>Xin chào!</h1>
+        <p>Website hỗ trợ học lập trình &nbsp;·&nbsp; Chọn ngôn ngữ để bắt đầu</p>
+    </div>
+
+    <p class="sec-label">Ngôn ngữ lập trình</p>
+
+    <div class="tile-grid">
+
+        <!-- HTML wide -->
+        <a class="tile wide blue" href="html/page1.html" title="Tìm hiểu HTML">
+            <div class="t-ico">🌐</div>
+            <div class="t-right">
+                <div class="t-big">HTML</div>
+                <div class="t-sub">Ngôn ngữ đánh dấu</div>
+            </div>
+            <span class="t-lbl">HTML</span>
+        </a>
+
+        <!-- Kotlin wide -->
+        <div class="tile wide purple" title="Kotlin - Sắp ra mắt">
+            <div class="t-ico">📱</div>
+            <div class="t-right">
+                <div class="t-big">Kotlin</div>
+                <div class="t-sub">Android Dev</div>
+            </div>
+            <span class="soon">Soon</span>
+            <span class="t-lbl">Kotlin</span>
+        </div>
+
+        <!-- Clock tile -->
+        <div class="tile md indigo" id="clock-tile">
+            <div class="t-ico"></div>
+            <div class="clk-wrap">
+                <div class="clk-time" id="ct-time">--:--</div>
+                <div class="clk-date" id="ct-date"></div>
+            </div>
+            <span class="t-lbl">Đồng hồ</span>
+        </div>
+  
+        <!-- CSS -->
+        <div class="tile md orange" title="CSS - Sắp ra mắt">
+            <div class="t-ico">🎨</div>
+            <span class="soon">Soon</span>
+            <span class="t-lbl">CSS</span>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="tile md lime" title="JavaScript - Sắp ra mắt">
+            <div class="t-ico">⚡</div>
+            <span class="soon">Soon</span>
+            <span class="t-lbl">JavaScript</span>
+        </div>
+
+        <!-- Game -->
+        <div class="tile md purple" title="Đố Vui - Sắp ra mắt">
+            <div class="t-ico">⚡</div>
+            <span class="soon">Soon</span>
+            <span class="t-lbl">Đố Vui</span>
+        </div>
+    </div>
+
+    <p class="sec-label">Tiện ích</p>
+
+    <div class="tile-grid">
+        <a class="tile sm green" href="html/infomation.html" title="Giới thiệu">
+            <div class="t-ico" style="font-size:22px">ℹ️</div>
+            <span class="t-lbl">Về trang</span>
+        </a>
+        <!-- setting -->
+        <!-- <div class="tile sm slate" title="Cài đặt">
+            <div class="t-ico" style="font-size:22px">⚙️</div>
+            <span class="t-lbl">Cài đặt</span>
+        </div> -->
+        <div class="tile sm pink" title="Liên hệ">
+            <div class="t-ico" style="font-size:22px">✉️</div>
+            <span class="t-lbl">Liên hệ</span>
+        </div>
+    </div>
+</div>
+
+<script src="js/date.js"></script>
+</body>
 </html>

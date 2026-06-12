@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Trang chủ</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;700&family=Source+Sans+3:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/home-metro-ui.css">
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+    <div class="topbar-l">
+        <!-- <div class="win-flag" title="Start">
+            <span class="f1"></span><span class="f2"></span>
+            <span class="f3"></span><span class="f4"></span>
+        </div> -->
+        <span class="topbar-title">Học Lập Trình</span>
+    </div>
+    <div class="topbar-r">
+        <span id="tb-date"></span>
+        <span id="tb-clock"></span>
+    </div>
+</div>
+
+<!-- Các phần tử ẩn để tránh lỗi script khi thiếu ID 'ct-time' và 'ct-date' -->
+<div style="display: none;">
+    <span id="ct-time"></span>
+    <span id="ct-date"></span>
+</div>
+
+<div class="screen">
+    <div class="greeting">
+        <h1>Xin chào!</h1>
+        <p style="font-size: larger;">Trong kỷ nguyên số hóa và sự bùng nổ của cách mạng công nghiệp 4.0, Công nghệ Thông tin (CNTT) đã trở thành ngành khoa học mũi nhọn, 
+            đóng vai trò then chốt trong mọi lĩnh vực đời sống. Đối với sinh viên chuyên ngành CNTT tại Trường Đại học Trà Vinh, 
+            việc làm chủ các ngôn ngữ lập trình không chỉ là yêu cầu học thuật bắt buộc mà còn là bệ phóng quyết định cơ hội nghề nghiệp trong tương lai. 
+            Tuy nhiên, quá trình tiếp cận các kiến thức lập trình nền tảng và nâng cao thường gặp không ít rào cản do thiếu thốn các công cụ thực hành trực quan và một lộ trình học tập được cá nhân hóa.</p>
+            <br>
+
+        <p style="font-size: larger;">Xuất phát từ thực trạng đó, dự án “Xây dựng website hỗ trợ học ngôn ngữ lập trình cho sinh viên Công nghệ Thông tin Đại học Trà Vinh” 
+            được nghiên cứu và phát triển. Hệ thống được xây dựng với mục tiêu cốt lõi là tạo ra một môi trường học tập trực tuyến thông minh, thân thiện và tối ưu hóa trải nghiệm người dùng. 
+            Website không chỉ cung cấp kho tài liệu bài giảng phong phú, hệ thống bài tập phân cấp từ cơ bản đến nâng cao, mà còn tích hợp trình biên dịch trực tuyến (Online Compiler) mạnh mẽ, 
+            cho phép sinh viên thực hành viết mã nguồn và nhận kết quả đánh giá tự động ngay tức thì.</p>
+            <br>
+
+        <p style="font-size: larger;">Phiên bản Demo này là bước thử nghiệm đầu tiên nhằm minh họa trực quan giao diện tương tác, 
+            cấu trúc các khóa học và tính năng thực hành cốt lõi của hệ thống. Chúng tôi kỳ vọng đây sẽ là công cụ hỗ trợ đắc lực, 
+            kích thích tinh thần tự học, tự nghiên cứu của sinh viên, đồng thời góp phần nâng cao chất lượng đào tạo nguồn nhân lực CNTT chất lượng cao, 
+            đáp ứng chuẩn đầu ra và nhu cầu thực tế của các doanh nghiệp hiện nay.</p>
+            <br>
+    </div>
+    
+    <div class="tile-grid">
+            <a class="tile sm orange" href="../index.html" title="Giới thiệu">
+                <div class="t-ico" style="font-size:22px"> 🏠</div>
+                <span class="t-lbl">Trang Chủ</span>
+            </a>
+    </div>
+</div>
+<script src="../js/date.js"></script>
+</body>
+</html>
