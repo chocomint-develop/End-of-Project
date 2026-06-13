@@ -1,0 +1,131 @@
+<!DOCTYPE html>		
+<html lang = "vi">
+	<head>
+		<title>Kotlin</title>
+		<meta charset = "utf-8">
+        <!-- external css -->
+		<link rel="stylesheet" href="../css/sidebar-content-kt.css">
+		<link rel="stylesheet" href="../css/header-style-kt.css">
+	</head>
+	<body>
+        <!-- Header Navigation -->
+        <header id="main-header">
+            <!-- Logo placeholder -->
+            <div class="logo-container">
+                <svg class="kotlin-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="kotlinModernGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#7F52FF" />
+                            <stop offset="45%" stop-color="#C711E1" />
+                            <stop offset="100%" stop-color="#E44857" />
+                        </linearGradient>
+                    </defs>
+                    <path fill="url(#kotlinModernGradient)" d="M24 0H0v24h24L12 12z"/>
+                </svg>
+
+                <span class="developer-text">&lt;/developer&gt;</span>
+            </div>
+
+            <!-- Nav links -->
+            <nav id="header-nav">
+                <div class="nav-item dropdown">
+                    <a href="../index.html" class="nav-link">Trang Chủ</span></a>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="page1.html" class="nav-link">HTML</span></a>
+                    <!-- <div class="dropdown-menu">
+                        <a href="page1.html">HTML</a>
+                        <a href="#">Kotlin (Coming soon) </a>
+                    </div> -->
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link active">Kotlin</span></a>
+                    <!-- <div class="dropdown-menu">
+                        <a href="#">Mục 1</a>
+                        <a href="#">Mục 2</a>
+                    </div> -->
+                </div>
+            </nav>
+        </header>
+		<!-- Thanh bên -->
+        <div id="sidebar">
+            <div class = "title">Tìm hiểu về Kotlin</div>
+
+            <!-- Nội dung đg ở  -->
+            <ul class = "nav-list">
+                <li><a href="#" class ="active">Giới thiệu Kotlin</a></li>
+            </ul>
+            <!-- list nội dung -->
+            <!-- <ul class = "nav-list"> 
+                <li><a href="page2.html">Trình soạn thảo HTML</a></li>
+                <li><a href="page3.html">Ví dụ cơ bản về HTML</a></li>
+                <li><a href="page4.html">Thuộc tính HTML</a></li>
+            </ul> -->
+        </div>
+
+        <!-- Nội dung chính -->
+        <div id="main-conttent">
+            <!-- Tiêu để trang -->
+            <div class = "page-header">
+                <h1 class="page-title">Giới thiệu Kotlin</h1>
+            </div>
+
+            <!-- nút chuyển nội dung -->
+            <div ckass = "nav-button">
+                <button class = "button-nav" onclick="document.location = '#'">❮ Lùi</button>
+                <button class = "button-nav" onclick="document.location = 'page2.html'">Tiếp ❯</button>
+            </div>
+            
+            <!-- intro -->
+            <p class ="intro-text">
+                Kotlin là một ngôn ngữ hiện đại, ngắn gọn, đa nền tảng và có khả năng tương tác với Java và các ngôn ngữ khác. <br>
+                Trong hôm nay, chúng ta sẽ xem xét một số ví dụ Kotlin cơ bản nhé!!
+            </p>            
+    
+            <hr class ="divider"> 
+            <!-- 1 -->
+            <h2 class ="section-title">Kotlin là gì?</h2>
+            <p>Kotlin là một ngôn ngữ lập trình hiện đại, đang thịnh hành, được JetBrains phát hành vào năm 2016.</p> <br>
+            <p>Nó trở nên rất phổ biến vì tương thích với Java (một trong những ngôn ngữ lập trình phổ biến nhất hiện nay), điều đó có nghĩa là mã Java (và các thư viện) có thể được sử dụng trong các chương trình Kotlin.</p> <br>
+            <p>Kotlin được sử dụng cho:</p> <br>
+            <ul class = "bullet-list">
+                <li>Phổ biến nhất là phát triển ứng dụng di động (đặc biệt là các ứng dụng Android) </li>
+                <li>Phát triển web</li>
+                <li>Ứng dụng cho các máy chủ </li>
+                <li>Khoa học dữ liệu</li>
+                <li>Và còn nhiều lĩnh vực khác...</li>  
+            </ul> 
+            <hr class ="divider">
+            <!-- 2 -->
+            <h2 class="section-title">Vậy tại sao nên sử dụng Kotlin?</h2>
+            <ul class = "bullet-list">
+                <li>Kotlin hoàn toàn tương thích với Java.</li>
+                <li>Kotlin hoạt động trên nhiều nền tảng khác nhau (Windows, Mac, Linux, Raspberry Pi, v.v.)</li>
+                <li>Kotlin ngắn gọn và an toàn.</li>
+                <li>Kotlin rất dễ học, đặc biệt nếu bạn đã biết Java.</li>
+                <li>Kotlin là ngôn ngữ lập trình miễn phí.</li>  
+                <li>Cộng đồng hỗ trợ lớn.</li>
+            </ul> 
+
+            <hr class ="divider">
+
+            <h2 class="section-title">Một ví dụ đơn giản về Kotlin</h2>
+            <div class ="example-box">
+                <div class ="example-label">Example</div>
+                    <div class="code-box">
+                        <span class="keyword">fun</span> <span class="function">main</span>() {<br>
+                        &nbsp;&nbsp;<span class="function">println</span>(<span class="string">"Hello World"</span>)<br>
+                        }
+                    </div>
+            </div>
+
+            <hr class ="divider"> 
+
+            <h3 class="section-title">Cấu trúc của Kotlin</h3>
+            <img src="../assets/image/code-sample-newlarge.svg" alt="Cấu-trúc-trang-html">
+
+            <hr class ="divider"> 
+
+        </div>
+	</body>
+</html>
