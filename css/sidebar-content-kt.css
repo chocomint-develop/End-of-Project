@@ -87,7 +87,7 @@
     cursor: pointer;
     text-decoration: none;
   }
-  .nav-list li a:hover { background: #cbbaff; }
+  .nav-list li a:hover { background: #015255; }
   .nav-list li a.active {
     background: #0494aa;
     color: #fff;
