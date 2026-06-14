@@ -1,0 +1,108 @@
+<!DOCTYPE html>		
+<html lang = "vi">
+	<head>
+		<title>Kotlin</title>
+		<meta charset = "utf-8">
+        <!-- external css -->
+		<link rel="stylesheet" href="../css/sidebar-content-kt.css">
+		<link rel="stylesheet" href="../css/header-style-kt.css">
+	</head>
+	<body>
+        <!-- Header Navigation -->
+        <header id="main-header">
+            <!-- Logo placeholder -->
+            <div class="logo-container">
+                <svg class="kotlin-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="kotlinModernGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#7F52FF" />
+                            <stop offset="45%" stop-color="#C711E1" />
+                            <stop offset="100%" stop-color="#E44857" />
+                        </linearGradient>
+                    </defs>
+                    <path fill="url(#kotlinModernGradient)" d="M24 0H0v24h24L12 12z"/>
+                </svg>
+
+                <span class="developer-text">&lt;/developer&gt;</span>
+            </div>
+
+            <!-- Nav links -->
+            <nav id="header-nav">
+                <div class="nav-item dropdown">
+                    <a href="../index.html" class="nav-link">Trang Chủ</span></a>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="page1.html" class="nav-link">HTML</span></a>
+                    <!-- <div class="dropdown-menu">
+                        <a href="page1.html">HTML</a>
+                        <a href="#">Kotlin (Coming soon) </a>
+                    </div> -->
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link active">Kotlin</span></a>
+                    <!-- <div class="dropdown-menu">
+                        <a href="#">Mục 1</a>
+                        <a href="#">Mục 2</a>
+                    </div> -->
+                </div>
+            </nav>
+        </header>
+		<!-- Thanh bên -->
+        <div id="sidebar">
+            <div class = "title">Tìm hiểu về Kotlin</div>
+
+            <!-- Nội dung đg ở  -->
+            <ul class = "nav-list">
+                <li><a href="page1kt.html">Giới thiệu Kotlin</a></li>
+            </ul>
+            <!-- list nội dung -->
+            <ul class = "nav-list"> 
+                <li><a href="page2kt.html" class ="active">Cài đặt Kotlin</a></li>
+                <!-- <li><a href="page3.html">Ví dụ cơ bản về HTML</a></li>
+                <li><a href="page4.html">Thuộc tính HTML</a></li> -->
+            </ul>
+        </div>
+
+        <!-- Nội dung chính -->
+        <div id="main-conttent">
+            <!-- Tiêu để trang -->
+            <div class = "page-header">
+                <h1 class="page-title">Cài đặt Kotlin</h1>
+            </div>
+
+            <!-- nút chuyển nội dung -->
+            <div ckass = "nav-button">
+                <button class = "button-nav" onclick="document.location = 'page1kt.html'">❮ Lùi</button>
+                <button class = "button-nav" onclick="document.location = '#'">Tiếp ❯</button>
+            </div>
+            
+            <!-- intro -->
+            <p class ="intro-text">
+                Bạn cần 1 IDE để có thể lập trình Kotlin
+            </p>            
+    
+            <hr class ="divider"> 
+            <!-- 1 -->
+            <h2 class ="section-title">Cài đặt IntelliJ </h2>
+            <p>Có rất nhiều phần mềm lập trình Kotlin như Android Studio, IntelliJ, Nhưng chúng ta sẽ làm quen và sử dụng IntelliJ (được phát triển bởi cùng những người đã tạo ra Kotlin), 
+                phần mềm này có thể tải xuống miễn phí từ <a href="https://www.jetbrains.com/idea/download/ ">https://www.jetbrains.com/idea/download/</a>. </p>
+            <hr class ="divider">
+            
+            <h2 class="section-title">Cài đặt Kotlin</h2>
+            <p>Sau khi tải xuống và cài đặt IntelliJ, hãy nhấp vào nút "New Project" để bắt đầu sử dụng IntelliJ:</p> <br>
+            <img src="../assets/image/スクリーンショットkt 2026-06-14 202934.png" alt="Giao dien IntelliJ">
+            <p>Sau đó nhấp vào "Kotlin" trong menu bên trái và nhập tên cho dự án của bạn:</p> <br>
+            <img src="../assets/image/スクリーンショット 2026-06-14 203338.png" alt="Tạo du an"> <br>
+            <p>Tiếp theo, chúng ta cần cài đặt JDK (Java Development Kit) để khởi chạy dự án Kotlin của mình. Nhấp vào menu "JDK", 
+                chọn "Download JDK..." và chọn phiên bản và nhà cung cấp (ví dụ: Eclipse Temurin 11) rồi nhấp vào nút "Download":</p> <br>
+            <img src="../assets/image/スクリーンショット 2026-06-14 203441.png" alt="Download JDK"> <br>
+            <p>Sau khi tải xuống và cài đặt JDK, hãy chọn nó từ menu lựa chọn, sau đó nhấp vào nút "Secect" và cuối cùng là "Create":</p> <br>
+            <img src="../assets/image/スクリーンショット 2026-06-14 203512.png" alt="Create"> <br>
+            <p>Giờ chúng ta có thể bắt đầu làm việc với dự án Kotlin của mình rồi.</p> <br>
+            <img src="../assets/image/スクリーンショット 2026-06-14 204322.png" alt="giao-dien-chinh"> <br>
+            <hr class ="divider"> 
+            <p><i>Còn tiếp...</i></p>
+            <hr class ="divider"> 
+        </div>
+	</body>
+</html>
