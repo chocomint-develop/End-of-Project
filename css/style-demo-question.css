@@ -1,0 +1,211 @@
+/* --- GIAO DIỆN CHUNG --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+.container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    overflow: hidden;
+    padding: 30px;
+    position: relative;
+}
+
+.screen {
+    display: none; /* Ẩn tất cả các màn hình mặc định */
+}
+
+.screen.active {
+    display: block; /* Chỉ hiển thị màn hình đang kích hoạt */
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- TIÊU ĐỀ & ĐIỂM SỐ --- */
+h1 {
+    font-size: 24px;
+    color: #4a5568;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.score-board {
+    background: #edf2f7;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: #4c51bf;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.result-board {
+    background: #e6fffa; 
+    color: #234e52;
+}
+
+/* --- NÚT BẤM CƠ BẢN --- */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
+}
+
+.btn-secondary {
+    background: #e2e8f0;
+    color: #4a5568;
+}
+
+.btn-secondary:hover {
+    background: #cbd5e0;
+    box-shadow: none;
+    transform: none;
+}
+
+.back-btn {
+    margin-top: 15px;
+}
+
+/* --- TRANG TRÒ CHƠI (QUIZ) --- */
+.quiz-header {
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: 10px; 
+    font-weight: bold;
+}
+
+.live-score-wrapper {
+    color: #ecc94b;
+}
+
+.progress-bar {
+    background: #e2e8f0;
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    background: #48bb78;
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.question-box {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.answers-list {
+    list-style: none;
+}
+
+.answer-item {
+    background: #f7fafc;
+    border: 2px solid #e2e8f0;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.answer-item:hover {
+    background: #edf2f7;
+    border-color: #cbd5e0;
+}
+
+/* Trạng thái Đúng / Sai khi được click chọn */
+.answer-item.correct {
+    background: #c6f6d5 !important;
+    border-color: #48bb78 !important;
+    color: #22543d;
+}
+
+.answer-item.wrong {
+    background: #fed7d7 !important;
+    border-color: #f56565 !important;
+    color: #742a2a;
+}
+
+.disabled {
+    pointer-events: none; /* Khóa tương tác bấm chọn khi đã trả lời xong */
+}
+
+/* --- TRANG ĐỔI THƯỞNG --- */
+.reward-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f7fafc;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.reward-info-title {
+    font-weight: bold;
+    color: #2d3748;
+}
+
+.reward-info-cost {
+    font-size: 13px;
+    color: #718096;
+}
+
+.btn-redeem {
+    background: #48bb78;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-redeem:hover {
+    background: #38a169;
+}

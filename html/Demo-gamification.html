@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamification Quiz & Rewards</title>
+    <link rel="stylesheet" href="../css/style-demo-question.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div id="screen-home" class="screen active">
+            <h1>Chinh Phục Thử Thách</h1>
+            <div class="score-board">✨ Điểm tích lũy: <span class="global-score">0</span> xu</div>
+            <button class="btn" onclick="switchScreen('screen-quiz'); startQuiz();">🎮 Bắt Đầu Chơi</button>
+            <button class="btn btn-secondary" onclick="switchScreen('screen-rewards')">🎁 Đổi Quà Thưởng</button>
+        </div>
+
+        <div id="screen-quiz" class="screen">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: bold;">
+                <span id="question-number">Câu hỏi 1/10</span>
+                <span style="color: #ecc94b;">⭐ <span id="live-score">0</span></span>
+            </div>
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+            
+            <div id="question-text" class="question-box">Đang tải câu hỏi...</div>
+            
+            <ul id="answers-container" class="answers-list">
+                </ul>
+        </div>
+
+        <div id="screen-result" class="screen">
+            <h1>Kết Thúc Lượt Chơi!</h1>
+            <div class="score-board" style="background: #e6fffa; color: #234e52;">
+                Bạn đã đúng: <span id="correct-count">0</span>/10 câu<br>
+                Nhận được: +<span id="earned-points">0</span> xu
+            </div>
+            <button class="btn" onclick="switchScreen('screen-home')">🏠 Quay về Trang Chủ</button>
+        </div>
+
+        <div id="screen-rewards" class="screen">
+            <h1>Cửa Hàng Quà Tặng</h1>
+            <div class="score-board">Số dư: <span class="global-score">0</span> xu</div>
+            
+            <div id="rewards-list">
+                <div class="reward-item">
+                    <div>
+                        <div class="reward-info-title">Voucher Trà Sữa 50%</div>
+                        <div class="reward-info-cost">Giá: 30 xu</div>
+                    </div>
+                    <button class="btn-redeem" onclick="redeemReward('Voucher Trà Sữa 50%', 30)">Đổi</button>
+                </div>
+                
+                <div class="reward-item">
+                    <div>
+                        <div class="reward-info-title">Vé Xem Phim Miễn Phí</div>
+                        <div class="reward-info-cost">Giá: 60 xu</div>
+                    </div>
+                    <button class="btn-redeem" onclick="redeemReward('Vé Xem Phim', 60)">Đổi</button>
+                </div>
+
+                <div class="reward-item">
+                    <div>
+                        <div class="reward-info-title">Tai Nghe Bluetooth Gaming</div>
+                        <div class="reward-info-cost">Giá: 100 xu</div>
+                    </div>
+                    <button class="btn-redeem" onclick="redeemReward('Tai Nghe Bluetooth', 100)">Đổi</button>
+                </div>
+            </div>
+
+            <button class="btn btn-secondary" style="margin-top: 15px;" onclick="switchScreen('screen-home')">⬅ Quay lại</button>
+        </div>
+
+    </div>
+
+    <script src="../js/Untitled-1.js"></script>
+</body>
+</html>
