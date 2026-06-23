@@ -90,12 +90,18 @@
                 <div class="code-box">
                     <span class="comment">&lt;!DOCTYPE html&gt;</span><br>
                     <span class="tag">&lt;</span><span class="tagname">html</span><span class="tag">&gt;</span><br>
+                    <span class ="tag">&lt;</span><span class ="tagname">head</span><span class ="tag">&gt;</span><br>
+                    &nbsp;&nbsp;<span class ="tag">&lt;</span><span class ="tagname">title</span><span class ="tag">&gt;</span>Tiêu đề trang
+                        <span class ="tag">&lt;/</span><span class ="tagname">title</span><span class ="tag">&gt;</span><br>
+                    &nbsp;&nbsp;<span class ="tag">&lt;</span><span class="tagname">meta </span><span class="tag">charset="UTF-8"</span><span class ="tag">&gt; <br>
+                    <span class ="tag">&lt;/</span><span class ="tagname">head</span><span class ="tag">&gt;</span><br>
                     <span class="tag">&lt;</span><span class="tagname">body</span><span class="tag">&gt;</span><br>
                     &nbsp;&nbsp;<span class="tag">&lt;</span><span class="tagname">h1</span><span class="tag">&gt;</span>Tiêu đề đầu tiên của tôi<span class="tag">&lt;/</span><span class="tagname">h1</span><span class="tag">&gt;</span><br>
                     &nbsp;&nbsp;<span class="tag">&lt;</span><span class="tagname">p</span><span class="tag">&gt;</span>Đoạn văn đầu tiên của tôi.<span class="tag">&lt;/</span><span class="tagname">p</span><span class="tag">&gt;</span><br>
                     <span class="tag">&lt;/</span><span class="tagname">body</span><span class="tag">&gt;</span><br>
                     <span class="tag">&lt;/</span><span class="tagname">html</span><span class="tag">&gt;</span><br>
-                </div>
+                </div><br>
+                <button class = "button-nav btn-try">Thử Code</button>
             </div>
 
             <hr class="divider">
@@ -127,7 +133,8 @@
                     <span class="tag">&lt;</span><span class="tagname">h1</span><span class="tag">&gt;</span>Đây là tiêu đề 1<span class="tag">&lt;/</span><span class="tagname">h1</span><span class="tag">&gt;</span><br>
                     <span class="tag">&lt;</span><span class="tagname">h2</span><span class="tag">&gt;</span>Đây là tiêu đề 2<span class="tag">&lt;/</span><span class="tagname">h2</span><span class="tag">&gt;</span><br>
                     <span class="tag">&lt;</span><span class="tagname">h3</span><span class="tag">&gt;</span>Đây là tiêu đề 3<span class="tag">&lt;/</span><span class="tagname">h3</span><span class="tag">&gt;</span><br>
-                </div>
+                </div> <br>
+                <button class="button-nav btn-try" data-src="../examples/h1-6.html">Thử Code</button>
             </div>
 
             <hr class="divider">
@@ -195,5 +202,61 @@
             </div>
         </div>
     </body>
+    <!-- sài đc -->
+    <!-- <script>
+        document.querySelectorAll('.example-box').forEach(box => {
+            const btn = box.querySelector('.btn-try');
+            const txtArea = box.querySelector('.full-code-raw');
+            
+            if (btn && txtArea) {
+                btn.addEventListener('click', () => {
+                    // Lấy nguyên vẹn giá trị text thô trong textarea
+                    const codeText = txtArea.value;
+                    
+                    sessionStorage.setItem('shared_html_code', codeText);
+                    window.location.href = 'code-box.html';
+                });
+            }
+        });
+    </script> -->
+<script>
+document.querySelectorAll('.example-box').forEach(box => {
+            const btn = box.querySelector('.btn-try');
+            if (!btn) return;
+
+            btn.addEventListener('click', async () => {
+                const fileSrc = btn.getAttribute('data-src');
+                let codeText = "";
+
+                try {
+                    //  Nếu nút bấm có data-src -> Fetch tải file độc lập từ ổ đĩa
+                    if (fileSrc) {
+                        const response = await fetch(fileSrc);
+                        if (!response.ok) throw new Error("Không thể tải file code mẫu.");
+                        codeText = await response.text();
+                    } 
+                    // Nếu không có data-src -> Tự lấy text hiển thị tại chỗ
+                    else {
+                        const codeBox = box.querySelector('.code-box');
+                        if (codeBox) {
+                            codeText = codeBox.innerText.replace(/\u00A0/g, ' ');
+                        }
+                    }
+
+                    // Lưu vào bộ nhớ tạm và chuyển hướng sang trang làm việc (code-box.html)
+                    if (codeText) {
+                        sessionStorage.setItem('shared_html_code', codeText);
+                        window.location.href = 'code-box.html';
+                    } else {
+                        alert("Không tìm thấy dữ liệu cấu trúc code!");
+                    }
+
+                } catch (error) {
+                    console.error("Lỗi:", error);
+                    alert("CẢNH BÁO BẢO MẬT TRÌNH DUYỆT:\nBạn không thể double-click mở trực tiếp file file:/// để chạy Fetch.\nHãy click chuột phải vào file chọn 'Open with Live Server' để chạy thử ổ đĩa local.");
+                }
+            });
+        });
+</script>
 </html>
             
