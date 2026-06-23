@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Live Editor</title>
+  <link rel="stylesheet" href="../css/code-box-style.css">
+</head>
+<body>
+
+  <h2 class="sr-only" style="display:none;">HTML Live Editor — soạn HTML bên trái, xem kết quả trực tiếp bên phải</h2>
+
+  <div id="app">
+    <div id="toolbar">
+      <i class="ti ti-code" aria-hidden="true" style="font-size:16px; color: var(--color-text-secondary);"></i>
+      <span>HTML Live Editor</span>
+      <button class="tbtn" id="btn-clear" title="Xoá code"><i class="ti ti-trash" aria-hidden="true"></i> Xoá</button>
+      <button class="tbtn" id="btn-format" title="Format code"><i class="ti ti-sparkles" aria-hidden="true"></i> Format</button>
+      <button class="tbtn run" id="btn-run"><i class="ti ti-player-play" aria-hidden="true"></i> Chạy</button>
+    </div>
+    
+    <div id="panes">
+      <div id="editor-pane">
+        <div class="pane-header"><span class="dot dot-orange"></span> index.html</div>
+        <!-- code box -->
+        <textarea id="code" spellcheck="false"></textarea>
+        <div class="status" id="status">Nhấn Ctrl+Enter để chạy nhanh</div>
+      </div>
+      
+      <div id="divider"></div>
+      
+      <div id="preview-pane">
+        <div class="pane-header"><span class="dot dot-green"></span> Preview</div>
+        <iframe id="preview-frame" sandbox="allow-scripts allow-same-origin allow-forms" title="Kết quả HTML"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/code-box-js-page1.js" defer></script>
+</body>
+</html>
