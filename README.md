@@ -30,7 +30,7 @@ Phiên bản **Demo** này là bước thử nghiệm đầu tiên nhằm minh h
 | :--- | :--- | :---: |
 | **Giao diện tương tác** | Trực quan, hiện đại, tối ưu cho sinh viên. | 🔄 Testing |
 | **Cấu trúc khóa học** | Lộ trình cá nhân hóa từ cơ bản đến nâng cao. | 🔄 Testing |
-| **Online Compiler** | Thực hành viết code và chấm điểm tự động. | ✅ Done |
+| **Online Compiler** | Thực hành viết code | ✅ Done |
 
 ---
 
