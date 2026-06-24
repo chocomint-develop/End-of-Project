@@ -34,11 +34,21 @@ document.addEventListener('DOMContentLoaded', () => {
         runCode();
     });
 
+   
     // Phím tắt Ctrl + Enter để chạy nhanh
     codeArea.addEventListener('keydown', (e) => {
         if (e.ctrlKey && e.key === 'Enter') {
             e.preventDefault();
             runCode();
+        }
+        if (e.key === 'Tab') {
+            e.preventDefault();
+            
+            const start = codeArea.selectionStart;
+            const end = codeArea.selectionEnd;
+            
+            codeArea.value = codeArea.value.substring(0, start) + '  ' + codeArea.value.substring(end);
+            codeArea.selectionStart = codeArea.selectionEnd = start + 2;
         }
     });
 });
