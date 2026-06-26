@@ -90,11 +90,12 @@ body{
 }
 
 /* sizes */
-.sm  {width:70px;height:70px}
-.md  {width:146px;height:146px}
-.wide{width:298px;height:146px}
-.tall{width:146px;height:298px}
-.lg  {width:298px;height:298px}
+.sm   {width:100px;height:100px}
+.swide{width:298px;height: 70px;}
+.md   {width:146px;height:146px}
+.wide {width:298px;height:146px}
+.tall {width:146px;height:298px}
+.lg   {width:298px;height:298px}
 
 /* colors — Windows 8 palette */
 .blue  {background:#0078d7}.dkblue {background:#004B87}
