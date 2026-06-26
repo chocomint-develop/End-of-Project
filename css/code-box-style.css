@@ -11,6 +11,9 @@
   --color-background-info: #e0f2fe;
   --color-border-info: #bae6fd;
   --color-text-info: #0284c7;
+  --color-text-clear: #c70202;
+  --color-border-clear: #f87171;
+   --color-background-clear: #fee2e2;
   --border-radius-md: 6px;
   --border-radius-lg: 8px;
 }
@@ -37,6 +40,8 @@ body { padding: 20px; background: #f8f9fa; } /* Thêm padding nhẹ cho body đ�
 .tbtn:hover { background: var(--color-border-tertiary); }
 .tbtn.run { background: var(--color-background-info); border-color: var(--color-border-info); color: var(--color-text-info); }
 .tbtn.run:hover { opacity: 0.85; }
+.tbtn.clear { background: var(--color-background-clear); border-color: var(--color-border-clear); color: var(--color-text-clear); }
+.tbtn.clear:hover { opacity: 0.85; }
 
 #panes { display: flex; flex: 1; overflow: hidden; }
 #editor-pane { display: flex; flex-direction: column; width: 50%; border-right: 1px solid var(--color-border-tertiary); }
